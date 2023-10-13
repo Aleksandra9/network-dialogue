@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "2246c377-9628-4715-a27f-2fe484ff915f",
+		"name": "Highload (dialogue)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15867547"
+	},
+	"item": [
+		{
+			"name": "Получение диалога",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiMTA0N2VhYzQtZGU5Zi00MzNhLTk5ODgtOGNmMTk0Zjk0NThiIiwiZXhwIjoxNzI3NTIwMTA0LCJpYXQiOjE2OTYyMzg1OTQsInNjb3BlIjoiW3JlYWRdIn0.GqJWdyNknqI5yL5Rcw-gZljzfswypir1JYu41gb9xUIyB2nbQ2WgNuRCPCvPdTsJOZl4xYXvj02YcbaPwQOQCqTqbmH8LqpIYVobdoBHQegSvCKgiL9T-JuO16t70tbp144Mr3FsdXLvgEhF8LGjiTjgg1U150nonRb2q2h0rki4GRVMTWJT21oe0T-2SqqSTSrwVerqPRXW5XAH3YDXUC54ADt2ojM-R3z4eqS9it5Cec7pPtFa62hE8_iTc_pH_QwW8xa5RGvpUmmRFcKv78f4WUJJY3yj-NO5tdtzirOhIEJCNnODZt2zTO0aGqosnkjvBfFFy_EoQl2uqqHqqQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dialog/02a46d28-b951-4068-bbc2-f858f7fe3e23/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dialog",
+						"02a46d28-b951-4068-bbc2-f858f7fe3e23",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка сообщения",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiMTA0N2VhYzQtZGU5Zi00MzNhLTk5ODgtOGNmMTk0Zjk0NThiIiwiZXhwIjoxNzI3NTIwMTA0LCJpYXQiOjE2OTYyMzg1OTQsInNjb3BlIjoiW3JlYWRdIn0.GqJWdyNknqI5yL5Rcw-gZljzfswypir1JYu41gb9xUIyB2nbQ2WgNuRCPCvPdTsJOZl4xYXvj02YcbaPwQOQCqTqbmH8LqpIYVobdoBHQegSvCKgiL9T-JuO16t70tbp144Mr3FsdXLvgEhF8LGjiTjgg1U150nonRb2q2h0rki4GRVMTWJT21oe0T-2SqqSTSrwVerqPRXW5XAH3YDXUC54ADt2ojM-R3z4eqS9it5Cec7pPtFa62hE8_iTc_pH_QwW8xa5RGvpUmmRFcKv78f4WUJJY3yj-NO5tdtzirOhIEJCNnODZt2zTO0aGqosnkjvBfFFy_EoQl2uqqHqqQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\" : \"message\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dialog/02a46d28-b951-4068-bbc2-f858f7fe3e23/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dialog",
+						"02a46d28-b951-4068-bbc2-f858f7fe3e23",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
