@@ -18,7 +18,12 @@ public interface DialogueRepository extends JpaRepository<Dialogue, String> {
 
     @Modifying
     @Transactional
-    @Query(value = "insert into dialogue (dialogue_id, from_user_id, to_user_id, text, create_datetime) " +
-            "values (:dialogueId, :fromUserId, :toUserId, :text, now())", nativeQuery = true)
+    @Query(value = "insert into dialogue (dialogue_id, from_user_id, to_user_id, text, status, create_datetime) " +
+            "values (:dialogueId, :fromUserId, :toUserId, :text, 'PENDING', now())", nativeQuery = true)
     void createMessage(@Param("dialogueId") String dialogueId, @Param("fromUserId") String fromUserId, @Param("toUserId") String toUserId, @Param("text") String text);
+
+    @Modifying
+    @Transactional
+    @Query(value = "update dialogue set status=:messageStatus where id = :messageId", nativeQuery = true)
+    void setStatus(@Param("messageId") String messageId, @Param("messageStatus") String messageStatus);
 }

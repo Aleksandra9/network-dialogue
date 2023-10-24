@@ -5,7 +5,6 @@ create table if not exists dialogue
     from_user_id varchar,
     to_user_id varchar,
     text varchar,
+    status varchar,
     create_datetime timestamp with time zone default now()
 );
-
-SELECT create_distributed_table('dialogue', 'dialogue_id');

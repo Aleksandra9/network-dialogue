@@ -22,5 +22,6 @@ public class Dialogue implements Serializable {
     private String fromUserId;
     private String toUserId;
     private String text;
+    private String status;
     private LocalDateTime createDatetime;
 }
